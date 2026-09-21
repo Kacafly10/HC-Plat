@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://djme6wdeutfqh"]
+[gd_scene format=3 uid="uid://djme6wdeutfqh"]
 
 [ext_resource type="Script" uid="uid://bun2kmcaci8x" path="res://gd/ch.gd" id="1_7cuh0"]
 [ext_resource type="Texture2D" uid="uid://buq8e15tv3pp4" path="res://a/roda.png" id="1_ah6nt"]
@@ -64,7 +64,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_vjrh7")
 }],
-"loop": true,
+"loop": 1,
 "name": &"default",
 "speed": 30.0
 }]
@@ -75,37 +75,40 @@ size = Vector2(720, 309)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jtqcx"]
 size = Vector2(251.5, 393)
 
-[node name="Node2D" type="CharacterBody2D"]
+[node name="Node2D" type="CharacterBody2D" unique_id=1644662461]
 collision_mask = 3
 script = ExtResource("1_7cuh0")
 
-[node name="w1" type="AnimatedSprite2D" parent="."]
+[node name="w1" type="AnimatedSprite2D" parent="." unique_id=1184669262]
 position = Vector2(-255, -64)
 sprite_frames = SubResource("SpriteFrames_3lurf")
 frame_progress = 0.8275541
 
-[node name="w2" type="AnimatedSprite2D" parent="."]
+[node name="w2" type="AnimatedSprite2D" parent="." unique_id=211976819]
 position = Vector2(257, -64)
 sprite_frames = SubResource("SpriteFrames_3lurf")
 frame_progress = 0.6019567
 
-[node name="w0" type="AnimatedSprite2D" parent="."]
+[node name="w0" type="AnimatedSprite2D" parent="." unique_id=133034171]
 position = Vector2(1, -64)
 sprite_frames = SubResource("SpriteFrames_3lurf")
 frame_progress = 0.20391661
 
-[node name="b" type="Sprite2D" parent="."]
+[node name="b" type="Sprite2D" parent="." unique_id=1970138146]
 position = Vector2(1, -330)
 texture = ExtResource("2_e4n77")
 
-[node name="y" type="Sprite2D" parent="."]
+[node name="y" type="Sprite2D" parent="." unique_id=1641579845]
 position = Vector2(1, -330)
 texture = ExtResource("4_tyxto")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1979743886]
 position = Vector2(1, -154.5)
 shape = SubResource("RectangleShape2D_7cuh0")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=757906664]
 position = Vector2(21.25, -480.5)
 shape = SubResource("RectangleShape2D_jtqcx")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1787059235]
+position = Vector2(1, -330)

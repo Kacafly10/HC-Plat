@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://t8ts72w13v0p"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_mq8aq"]
+font_size = 76
+font_color = Color(0.012617188, 0.012617188, 0.012617188, 1)
+
+[node name="DOne" type="Node2D" unique_id=1314730969]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=528641039]
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(1, 1, 0.3764706, 1)
+
+[node name="Label" type="Label" parent="." unique_id=959761848]
+offset_left = 886.0
+offset_top = 437.0
+offset_right = 1101.0
+offset_bottom = 542.0
+text = "Done!"
+label_settings = SubResource("LabelSettings_mq8aq")

@@ -13,7 +13,7 @@ func _ready() -> void:
 func _physics_process(delta: float):
 	if !is_on_floor():
 		velocity.y += gravity 
-	if Input.is_action_just_pressed("j"):
+	if Input.is_action_just_pressed("j") && is_on_floor():
 		velocity.y -= jumpVel
 	
 	
@@ -35,5 +35,6 @@ func _process(delta: float) -> void:
 		$w0.stop()
 		$w1.stop()
 		$w2.stop()
-		
-		
+
+func _on_body_in(body: Node2D) -> void:
+	get_tree().change_scene_to_file("res://sc/d_one.tscn")

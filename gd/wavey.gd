@@ -1,23 +1,23 @@
-extends Node2D
+extends Container
 
 @export var maxD = Vector2(600, 300)
+var totalD = []
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	totalD.resize(12)
+	totalD.fill(Vector2.ZERO)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	var waves = [$w0, $w1, $w2, $w3]
-	var totalD = []
-	totalD.resize(4)
-	totalD.fill(Vector2.ZERO)
+	print("yes")
+	var waves = [$w0, $w1, $w2, $w3, $w4, $w5, $w6, $w7, $w8, $w9, $w10, $w11]
 	
 	var i=0
 	for wave in waves:
 		totalD[i] += moveWave(wave, totalD, delta, i)
-		print(totalD[i])
+		#print(totalD[i])
 		i += 1
 	await get_tree().create_timer(0.5).timeout
 	
